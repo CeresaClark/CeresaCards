@@ -88,6 +88,7 @@ $('.event').on('click', function () {
     $('.eventBG').fadeOut(300)
     $('.light').css('background', 'none')
     $('.roll').html('')
+    $('.UReffect').fadeOut(300)
 })
 
 let N_nameArray = ['Blessing', '戰鬥修女', '玉米裝', '性感睡衣', '嚕咪帽T', '外出服', '櫻花下', '黑手黨', '祈禱']
