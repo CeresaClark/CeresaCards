@@ -1,0 +1,369 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200..900&display=swap');
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Noto Serif SC", serif;
+    font-weight: 700;
+    user-select: none;
+    overflow-x: hidden;
+}
+
+.mainWrap {
+    position: absolute;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    top: 0;
+    left: 0;
+}
+
+.mainBg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(img/card/UR1.png)no-repeat center top / cover;
+    z-index: 0;
+}
+
+video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.spark {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.mainTitle {
+    position: absolute;
+    width: 45vw;
+    aspect-ratio: 1 / 0.5;
+    top: 7%;
+    left: 2%;
+    background: url(img/title.png)no-repeat center / contain;
+}
+
+.name {
+    position: absolute;
+    width: 42.8vw;
+    aspect-ratio: 1 / 0.44;
+    bottom: 9%;
+    left: 2.8%;
+    background: url(img/name.png)no-repeat center / contain;
+}
+
+.limited {
+    position: absolute;
+    width: 24vw;
+    aspect-ratio: 1 / 0.344;
+    top: 4%;
+    right: 3%;
+    background: url(img/limited.png)no-repeat center / contain;
+}
+
+.rate {
+    position: absolute;
+    width: 24vw;
+    aspect-ratio: 1 / 0.35;
+    top: 25%;
+    right: 2%;
+    background: url(img/rate.png)no-repeat center / contain;
+}
+
+.note {
+    position: absolute;
+    width: 28vw;
+    aspect-ratio: 1 / 0.1;
+    bottom: 18.4%;
+    right: 4%;
+    background: url(img/note.png)no-repeat center / contain;
+}
+
+.btns {
+    position: absolute;
+    right: 1%;
+    bottom: 6%;
+    display: flex;
+}
+
+.btns div {
+    width: 17vw;
+    aspect-ratio: 1 / 0.35;
+    background: url(img/btn1.png)no-repeat center / contain;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btns div:hover {
+    filter: brightness(1.2);
+    transform: translateY(-3%);
+}
+
+#btn1 {
+    margin-right: 0.25vw;
+}
+
+#btn10 {
+    margin-left: 0.25vw;
+    background-image: url(img/btn10.png);
+}
+
+.event {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background-color: #fff;
+    overflow: hidden;
+    display: none;
+}
+
+.eventBG {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(img/bg.png)no-repeat center / cover;
+    display: none;
+}
+
+.eventBG div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.eventBG div::before,
+.eventBG div::after {
+    position: absolute;
+    content: '';
+    width: 10%;
+    aspect-ratio: 1 / 1;
+    background: url(img/corner.png)no-repeat center / contain;
+}
+
+.eventBG div::before {
+    top: 0;
+}
+
+.eventBG div::after {
+    bottom: 0;
+}
+
+.c1::before {
+    left: 0;
+    transform: scale(-1);
+}
+
+.c1::after {
+    left: 0;
+    transform: scaleX(-1);
+}
+
+.c2::before {
+    right: 0;
+    transform: scaleY(-1);
+}
+
+.c2::after {
+    right: 0;
+}
+
+.roll {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.card {
+    position: relative;
+    width: 18%;
+    aspect-ratio: 5 / 7;
+    margin: 2% 1%;
+    overflow: hidden;
+    transform: translateY(-100%);
+    opacity: 0;
+    filter: drop-shadow(#743232 0 0.3vw 0.3vw);
+}
+
+.SR{
+    filter: drop-shadow(#ff44e6 0 0 1vw);
+}
+
+.SSR{
+    filter: drop-shadow(#ffe600 0 0 1vw);
+}
+
+.UR{
+    filter: drop-shadow(#ffa0a0 0 0 0.5vw)
+            drop-shadow(#ffd093 0 0 0.5vw)
+            drop-shadow(#fff89a 0 0 0.5vw)
+            drop-shadow(#c6ffb5 0 0 0.5vw)
+            drop-shadow(#a6d7ff 0 0 0.5vw)
+            drop-shadow(#f9b1ff 0 0 0.5vw);
+}
+
+.img {
+    position: absolute;
+    width: 100%;
+    aspect-ratio: 5 / 7;
+    top: 0;
+    left: 0;
+    background: url(img/card/SR1.png)no-repeat center top / cover;
+}
+
+.frame {
+    position: absolute;
+    width: 100%;
+    aspect-ratio: 5 / 7;
+    top: 0;
+    left: 0;
+    background: url(img/frame-SR.png)no-repeat center / cover;
+}
+
+.card_name {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 2.5%;
+    font-size: 1vw;
+    color: #e8cda3;
+    white-space: nowrap;
+}
+
+.light {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.UReffect {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    width: 200%;
+    aspect-ratio: 16 / 9;
+    background: url(img/card/UR1A.png)no-repeat center / cover;
+    /* background-image: url(img/card/UR0A.png); */
+    animation: UR0_ani 8s 1 ease-in-out forwards;
+    display: none;
+}
+
+.pop {
+    position: absolute;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background-color: #000000c2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.pop span {
+    width: fit-content;
+    color: #fff1f1;
+    font-size: 2vw;
+    white-space: nowrap;
+}
+
+#ok {
+    width: fit-content;
+    padding: 0.5vw 2vw;
+    font-size: 2vw;
+    color: #fff;
+    margin-top: 1vw;
+    border-radius: 10vw;
+    border: #752727 0.3vw solid;
+    text-align: center;
+    align-items: center;
+    background-color: #a34646;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#ok:hover {
+    background-color: #c46f6f;
+    transform: translateY(-5%);
+}
+
+@keyframes UR0_ani {
+    0% {
+        width: 200%;
+        transform: translate(-20%, -5%);
+    }
+    50% {
+        width: 200%;
+        transform: translate(-40%, -40%);
+    }
+
+    100% {
+        width: 100%;
+        transform: translate(0%, 0%);
+    }
+}
+
+@keyframes UR1_ani {
+    0% {
+        width: 200%;
+        transform: translate(-20%, -5%);
+    }
+    50% {
+        width: 200%;
+        transform: translate(-40%, -40%);
+    }
+
+    100% {
+        width: 100%;
+        transform: translate(0%, 0%);
+    }
+}
+
+@keyframes card_ani {
+    0% {
+        transform: translateY(-100%) scale(1.6);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0%) scale(1.6);
+        opacity: 1;
+    }
+}
+
+@keyframes card_ani2 {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
